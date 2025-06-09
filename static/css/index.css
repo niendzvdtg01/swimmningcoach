@@ -1,0 +1,709 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* Header start */
+.nav-bar {
+    background-color: rgb(227, 236, 236);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+/* navigation */
+.nav-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-tab nav {
+    padding: 20px 10px;
+    margin: 6px 6px;
+}
+
+.nav-tab nav a {
+    text-decoration: none;
+    color: #373737;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-tab nav :hover {
+    color: #f05050;
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-logo img {
+    height: 120px;
+    margin-left: 300px;
+}
+
+.nav-services {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 300px;
+}
+
+.nav-services img {
+    height: 20px;
+    margin: 20px;
+}
+
+/* Tao search-bar */
+.search-bar {
+    background-color: #f3f3f3;
+    z-index: 9999;
+    bottom: 20%;
+    width: 380px;
+    height: 90px;
+    top: 11%;
+    right: 10%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    visibility: hidden;
+    transform: scale(0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.search-bar.active {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.search-bar input {
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 220px;
+}
+
+.search-bar button {
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.search-bar span {
+    position: absolute;
+    padding: 4px;
+    background-color: #ccc;
+    top: 20%;
+    right: 10px;
+    border-radius: 50%;
+}
+
+/* end header */
+/* start */
+/* image-intro */
+.img-intro {
+    width: 100%;
+}
+
+.img-intro img {
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+}
+
+.quote-text {
+    position: absolute;
+    bottom: 200px;
+    margin-left: 140px;
+}
+
+.quote-text>h1 {
+    font-size: 60px;
+    color: rgb(46, 42, 42);
+    font-weight: bold;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.intro-btn button {
+    position: relative;
+    /* Cần thiết để lớp overlay hoạt động đúng */
+    background-color: #64ACFF;
+    margin: 16px 16px;
+    height: 50px;
+    width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: aliceblue;
+    box-shadow: 0 4px 6px 0 rgb(0, 0, 0, 0.15), 0 6px 8px rgb(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: 2s;
+    font-weight: bold;
+}
+
+.intro-btn button .layer {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    transition: top 0.5s linear;
+    color: #f0eeee;
+    padding: 10px;
+}
+
+.intro-btn button:hover .layer {
+    top: 0;
+}
+
+/* About us */
+.About-us {
+    display: flex;
+    width: 100%;
+    background-color: #fffafa;
+}
+
+.Ab-text span {
+    font-size: 17px;
+    color: #ff6464;
+    font-weight: 600;
+    line-height: 0;
+}
+
+.Ab-text h2 {
+    font-size: 35px;
+    margin-top: 2px;
+}
+
+.Ab-text p {
+    max-width: 560px;
+
+}
+
+.about-btn {
+    margin-top: 32px;
+}
+
+.default-btn {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    background-color: #64acff;
+    padding: 14px 40px 10px 40px;
+    font-weight: 500;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.default-btn:hover {
+    transform: scale(1.2);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Ab-video img {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* serviecs */
+.service-erea {
+    position: relative;
+}
+
+.section-title span {
+    font-size: 18px;
+    color: #ff6464;
+    font-weight: 600;
+    line-height: 0;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-top: 2px;
+    color: #373e58;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.section-title p {
+    max-width: 560px;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+    color: #565e7c;
+    font-weight: 400;
+}
+
+/* slide */
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* apply area */
+
+.apply-area {
+    background-image: url(../img/intro2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+}
+
+.apply-text {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+    padding-top: 116px;
+    padding-bottom: 120px;
+}
+
+.apply-text span {
+    font-size: 17px;
+    color: #ff6464;
+    font-weight: 600;
+    margin: 0;
+}
+
+.apply-text h2 {
+    font-size: 35px;
+    max-width: 560px;
+    margin: auto;
+    color: #fff;
+    padding-top: 3px;
+}
+
+.apply-text p {
+    margin-top: 20px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-weight: 400;
+}
+
+.apply-text .apply-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.default-btn1 a {
+    overflow: hidden;
+    color: #fff;
+    width: 200px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #ff6464;
+    padding: 14px 30px 10px 30px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.default-btn1 .layer {
+    display: flex;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 100, 168);
+    transition: top 0.5s linear;
+    color: #f0eeee;
+    align-items: center;
+    justify-content: center;
+}
+
+.default-btn1:hover .layer {
+    top: 0;
+}
+
+.default-btn2 a {
+    width: 200px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    background-color: #195d94;
+    padding: 14px 30px 10px 30px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.default-btn2 .layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff6464;
+    transition: top 0.5s linear;
+    color: #f0eeee;
+}
+
+.default-btn2:hover .layer {
+    top: 0;
+}
+
+/* Course area */
+.course-area {
+    position: relative;
+    overflow: hidden;
+}
+
+.course-item {
+    margin-bottom: 30px;
+    max-width: 663px;
+    margin-left: auto;
+}
+
+.course-text span {
+    font-size: 17px;
+    color: rgb(255, 100, 100);
+    font-weight: 600;
+    margin: 0px;
+}
+
+.course-text h2 {
+    font-size: 35px;
+    padding-top: 3px;
+    margin-bottom: 20px;
+}
+
+.course-text p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.course-text .course-btn {
+    margin-top: 35px;
+}
+
+.course-img img {
+    margin-bottom: 30px;
+    position: relative;
+    margin-left: 30px;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.course-img-2 img {
+    margin-bottom: 30px;
+    position: relative;
+    margin-right: 30px;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.course-item-2 {
+    margin-bottom: 30px;
+    max-width: 663px;
+    margin-right: auto;
+}
+
+.course-text span {
+    font-size: 17px;
+    color: #ff6464;
+    font-weight: 600;
+    margin: 0;
+}
+
+.course-text h2 {
+    font-size: 35px;
+    padding-top: 3px;
+    margin-bottom: 20px;
+}
+
+.course-text p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.instructor-all {
+    background-color: rgb(255, 250, 250);
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.section-title span {
+    font-size: 17px;
+    color: rgb(255, 100, 100);
+    font-weight: 600;
+    line-height: 0;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-top: 2px;
+}
+
+.trainer-card {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.trainer-card img {
+    height: 300px;
+    width: 100%;
+}
+
+.trainer-card .trainer-content {
+    position: relative;
+    max-width: 240px;
+    background-color: rgb(255, 255, 255);
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px;
+    padding: 17px 0px;
+    transition: 0.7s;
+}
+
+.trainer-card .trainer-content a {
+    display: block;
+    text-decoration: none;
+}
+
+.trainer-card .trainer-content a h3 {
+    display: block;
+    font-size: 20px;
+    color: rgb(55, 55, 55);
+}
+
+.trainer-card .trainer-content span {
+    font-size: 14px;
+    color: rgb(55, 55, 55);
+    display: block;
+    line-height: 1;
+}
+
+/* footer */
+
+.footer-area {
+    position: relative;
+    z-index: 1;
+    background-color: #063264;
+}
+
+.footer-content {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.footer-content a img {
+    display: inline-block;
+    transition: all 0.5s;
+    text-decoration: none;
+    max-width: 140px;
+}
+
+.footer-content .footer-conten-title p {
+    color: #fff;
+    margin-top: 25px;
+    max-width: 270px;
+}
+
+.footer-content .newsleter-area h3 {
+    font-size: 24px;
+    color: #ff6464;
+    margin-bottom: 15px;
+}
+
+.footer-content .newsleter-area .newsletter-form {
+    position: relative;
+    max-width: 300px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.footer-content .newsleter-area .newsletter-form .form-control {
+    background: #fff;
+    height: 50px;
+    line-height: 52px;
+    margin: 0;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer-content .newsleter-area .newsletter-form .subscribe-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    background: #ff6464;
+    color: #fff;
+    height: 50px;
+    line-height: 54px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.5;
+}
+
+.footer-content .footer-social {
+    margin-top: 20px;
+}
+
+.footer-content .footer-social ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-content .footer-social ul li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.footer-content .footer-social ul li a {
+    color: rgb(255, 255, 255);
+    line-height: 40px;
+    height: 20px;
+}
+
+.footer-list {
+    margin-bottom: 30px;
+}
+
+.footer-list h3 {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-list ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-list ul li {
+    margin-top: 15px;
+    display: block;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+}
+
+.footer-list ul li a {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Hieu ung */
+#page-wrapper {
+    animation: slideInFromTop 5s ease forwards;
+    transform: translateY(-6%);
+}
+
+@keyframes slideInFromLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    /* màu xám nhạt */
+    border-top: 8px solid #3498db;
+    /* màu xanh dương */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(73, 97, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}

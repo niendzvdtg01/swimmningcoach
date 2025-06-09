@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagoona</title>
+    <link rel="icon" type="img/x-icon" href="../static/img/logo.svg">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../static/css/index.css">
+
+</head>
+<div class="search-bar" id="search-bar">
+    <input type="text" placeholder="Tìm khóa học">
+    <button>Search</button>
+    <a href="#" onclick="closesearch()"><span>x</span></a>
+</div>
+
+<body id="main-content">
+    <header>
+        <div id="loading-screen">
+            <div class="spinner"></div>
+        </div>
+        <!-- nav -->
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <img src="../static/img/Lagoona_logo_transparent.png" alt="logo">
+            </div>
+            <div class="nav-tab">
+                <nav><a href="./index.html">Trang chủ</a></nav>
+                <nav><a href="./trainer.html">Huấn luyện viên</a></nav>
+                <nav><a href="./settime.html">Đặt lịch học</a></nav>
+                <nav><a href="#">Thông tin thêm</a></nav>
+                <nav><a href="#">Liên hệ</a></nav>
+            </div>
+            <div class="nav-services">
+                <a href="#"><img src="../static/img/cart.svg" alt="cart"></a>
+                <a href="#"><img src="../static/img/search.svg" alt="search" onclick="search()"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- imgage -->
+        <div class="img-intro" id="page-wrapper">
+            <img src="../static/img/intro1.jpg" alt="image">
+            <div class="quote-text" id="page-wrapper">
+                <h1>
+                    DỊCH VỤ TÌM HUẤN <br>
+                    LUYỆN VIÊN BƠI CHO <br>
+                    HỌC SINH TIỂU HỌC
+                </h1>
+                <p style="font-size: 16px; margin-left: 20px; font-weight: 600;">
+                    Cung cấp một nền tảng trực tuyến dễ sử dụng, <br> kết nối phụ
+                    huynh với huấn luyện viên, đánh giá, <br> lựa chọn và đặt lịch học với
+                    các huấn luyện viên phù hợp.
+                </p>
+                <div class="intro-btn">
+                    <button>
+                        Khám phá
+                        <div class="layer">
+                            <p>Khám phá</p>
+                        </div>
+                    </button>
+                    <button>
+                        <div class="layer">
+                            <p>Liên hệ</p>
+                        </div>
+                        Liên hệ
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="About-us">
+            <div class="container pt-5 my-5">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="Ab-text col-lg-6">
+                        <span>Về chúng tôi</span>
+                        <h2>Tận hướng sự an toàn từ <br> dịch vụ uy tín và chất lượng hàng đầu Việt Nam</h2>
+                        <p>Tạo môi trường minh bạch, công khai về năng lực, <br>
+                            kinh nghiệm và đánh giá của từng huấn luyện viên. <br>
+                            Tạo cơ hội việc làm và mở rộng mạng lưới cho các huấn <br>
+                            luyện viên tự do, gia sư hoặc chuyên gia kỹ năng.
+                        </p>
+                        <div class="about-btn">
+                            <a href="" class="default-btn">Know more</a>
+                        </div>
+                    </div>
+                    <div class="Ab-video col-lg-6">
+                        <img src="../static/img/video-img.jpg" alt="video">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="service-erea ">
+            <div class="container pt-5 my-5">
+                <div class="section-title text-center mb-50">
+                    <span> Giới thiệu Dịch Vụ</span>
+                    <h2>
+                        Lagoona mang đến dịch vụ chất lượng cho trẻ em
+                    </h2>
+                    <p>
+                        Chúng tôi tự hào giới thiệu dịch vụ bơi lội dành riêng cho trẻ nhỏ – nơi các bé không chỉ học
+                        bơi an toàn, đúng kỹ thuật mà còn được vui chơi, phát triển thể chất và tăng cường sự tự tin.
+                        Với đội ngũ huấn luyện viên chuyên nghiệp, môi trường sạch sẽ, thân thiện và trang thiết bị hiện
+                        đại, Dobby cam kết mang đến trải nghiệm học bơi vừa bổ ích, vừa đầy niềm vui cho các bé.
+                    </p>
+                </div>
+                <div class="slider">
+                    <img class="slide active" src="../static/img/img1.jpg" />
+                    <img class="slide" src="/static/img/img2.jpg" />
+                    <img class="slide" src="/static/img/img3.jpg" />
+
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+                </div>
+
+            </div>
+        </section>
+        <div class="apply-area">
+            <div class="container">
+                <div class="apply-text">
+                    <span>Đăng Ký Ngay</span>
+                    <h2>Chúng tôi đang tuyển sinh học viên mới cho 3 lĩnh vực đào tạo</h2>
+                    <p>Hãy nhanh tay đăng ký để trở thành một phần của môi trường học tập năng động, chuyên nghiệp và
+                        đầy cảm hứng. Chúng tôi luôn chào đón các học viên mới có đam mê và mong muốn phát triển kỹ năng
+                        trong các lĩnh vực chuyên môn khác nhau. Cơ hội đang mở ra – đừng bỏ lỡ!
+                    </p>
+                    <div class="apply-btn">
+                        <div class="default-btn1">
+                            <a href="#">
+                                <div class="layer">
+                                    <p>Đặt lịch ngay</p>
+                                </div>
+                                Đặt lịch ngay
+                            </a>
+                        </div>
+                        <div class="default-btn2">
+                            <a href="#">
+                                <div class="layer">
+                                    <p>Xem ngay</p>
+                                </div>
+                                Xem ngay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="course-area">
+            <div class="container pt-5 my-5">
+                <div class="d-flex justify-content-center">
+                    <div class="col-lg-7 col-xxl-6">
+                        <div class="course-item">
+                            <div class="course-text">
+                                <span>Khóa Học Bơi</span>
+                                <h2>Được giảng dạy bởi những huấn luyện viên giàu kinh nghiệm nhất</h2>
+                                <p>Khóa học bơi tại trung tâm được thiết kế dành cho mọi độ tuổi, đặc biệt là trẻ em và
+                                    người mới bắt đầu. Với phương pháp giảng dạy chuyên nghiệp, tận tâm và an toàn, học
+                                    viên sẽ được hướng dẫn từng bước từ cơ bản đến nâng cao. Huấn luyện viên của chúng
+                                    tôi là những người có nhiều năm kinh nghiệm, giúp học viên phát triển kỹ năng, tăng
+                                    cường thể chất và tự tin khi xuống nước.</p>
+                                <p>Hãy cùng chúng tôi khám phá niềm vui trong từng nhịp bơi và xây dựng nền tảng sức
+                                    khỏe vững chắc cho tương lai!
+                                </p>
+                                <div class="course-btn">
+                                    <div class="default-btn2">
+                                        <a href="#">
+                                            <div class="layer">
+                                                <p>Xem ngay</p>
+                                            </div>
+                                            Xem ngay
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-xxl-6">
+                        <div class="course-img">
+                            <img src="/static/img/course-img.jpg" alt="Course Images">
+                        </div>
+                    </div>
+                </div>
+                <div class="course-another pt-5 my-3">
+                    <div class="d-flex justify-content-center">
+                        <div class="col-lg-5 col-xxl-6">
+                            <div class="course-img-2">
+                                <img src="/static/img/course-img2.jpg" alt="img-2">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-xxl-6">
+                            <div class="course-item-2">
+                                <div class="course-text">
+                                    <span>Khóa Học Lặn</span>
+                                    <h2>Được hướng dẫn bởi những huấn luyện viên giàu kinh nghiệm nhất</h2>
+                                    <p>Khóa học lặn được thiết kế dành cho những ai yêu thích khám phá thế giới dưới
+                                        nước. Với sự hướng dẫn tận tình từ các huấn luyện viên chuyên nghiệp có nhiều
+                                        năm kinh nghiệm, học viên sẽ được đào tạo từ những kỹ thuật cơ bản đến nâng cao,
+                                        bao gồm: kỹ năng thở dưới nước, xử lý tình huống và đảm bảo an toàn tuyệt đối
+                                        khi lặn sâu.</p>
+                                    <p>Khóa học không chỉ giúp bạn làm chủ kỹ năng lặn mà còn mang đến trải nghiệm thú
+                                        vị, khám phá đại dương và vượt qua giới hạn của bản thân.
+                                    </p>
+                                    <div class="course-btn">
+                                        <div class="default-btn2">
+                                            <a href="#">
+                                                <div class="layer">
+                                                    <p>Xem ngay</p>
+                                                </div>
+                                                Xem ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="instructor-all pt-5 mt-5">
+            <div class="container">
+                <div class="section-title text-center pt-3 mb-5">
+                    <span>Huấn Luyện Viên Của Chúng Tôi</span>
+                    <h2>Đội ngũ giảng viên giàu kinh nghiệm và tận tâm</h2>
+                    <p>Chúng tôi tự hào sở hữu đội ngũ huấn luyện viên chuyên môn cao, được đào tạo bài bản và có nhiều
+                        năm kinh nghiệm trong việc giảng dạy bơi lội và lặn cho mọi lứa tuổi. Các huấn luyện viên không
+                        chỉ am hiểu kỹ thuật mà còn luôn tận tâm, kiên nhẫn và thân thiện, tạo môi trường học tập an
+                        toàn, vui vẻ và hiệu quả cho từng học viên.</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-lg-3 col-sm-6 m-3">
+                        <div class="trainer-card">
+                            <a href="#">
+                                <img src="../static/img/coach1.jpg" alt="Trainer-img">
+                            </a>
+                            <div class="trainer-content">
+                                <a href="#">
+                                    <h3>Johnny simp</h3>
+                                </a>
+                                <span>Swim trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 m-3">
+                        <div class="trainer-card">
+                            <a href="#">
+                                <img src="../static/img/coach2.jpg" alt="Trainer-img">
+                            </a>
+                            <div class="trainer-content">
+                                <a href="#">
+                                    <h3>Mai kalifa</h3>
+                                </a>
+                                <span>Swim trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 m-3">
+                        <div class="trainer-card">
+                            <a href="#">
+                                <img src="../static/img/coach3.jpg" alt="Trainer-img">
+                            </a>
+                            <div class="trainer-content">
+                                <a href="#">
+                                    <h3>Khalib</h3>
+                                </a>
+                                <span>Swim trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 m-3">
+                        <div class="trainer-card">
+                            <a href="#">
+                                <img src="../static/img/coach4.webp" alt="Trainer-img" style="object-fit: cover;">
+                            </a>
+                            <div class="trainer-content">
+                                <a href="#">
+                                    <h3>Yuki</h3>
+                                </a>
+                                <span>Swim trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-area">
+        <div class="footer pt-5">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="footer-content">
+                            <div class="footer-conten-title">
+                                <div class="footer-conten-title">
+                                    <a href="#">
+                                        <img src="../static/img/Lagoona_logo_transparent.png" alt="logo">
+                                    </a>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae impedit nostrum,
+                                        minima consequatur ab, sede.</p>
+                                </div>
+                                <div class="newsleter-area">
+                                    <h3>Join Newsletter</h3>
+                                    <form action="" class="newsletter-form">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                        <button class="subscribe-btn disabled" type="submit">Subscribe</button>
+                                    </form>
+                                </div>
+                                <div class="footer-social">
+                                    <ul>
+                                        <li><a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                    <path
+                                                        d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li><a href="#" target="_blank">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                                                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                    <path
+                                                        d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li><a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                    <path
+                                                        d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li><a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                    <path
+                                                        d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 mt-5">
+                        <div class="footer-list">
+                            <h3>Our Service</h3>
+                            <ul>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mt-5">
+                        <div class="footer-list">
+                            <h3>Our Service</h3>
+                            <ul>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mt-5">
+                        <div class="footer-list">
+                            <h3>Our Service</h3>
+                            <ul>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                                <li><a href="#">Swimming Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../static/js/index.js" defer></script>
+
+</html>
